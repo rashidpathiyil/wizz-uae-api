@@ -1,0 +1,20 @@
+---
+application:
+  name: "wizz-uae-api"
+  project: "directus"
+  organization: "QoveryCommunity"
+  storage:
+  - name: "local"
+    size: "10"
+    type: "ssd"
+    mount_point: "/mnt/local"
+databases:
+- type: "POSTGRESQL"
+  name: "wizzuae"
+  version: "12"
+routers:
+- name: "main-wizz-uae-api"
+  routes:
+  - application_name: "wizz-uae-api"
+    paths:
+    - "/*"
